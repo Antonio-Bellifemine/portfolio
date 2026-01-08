@@ -198,7 +198,7 @@ main {
     background-image: url('assets/images/profilepic.jpg'); 
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -206,6 +206,7 @@ main {
     position: relative;
     container-type: inline-size;
     background-color: #ffffff; /* fallback if no image */
+    text-align: center;
 }
 
 /* Position the container as reference */
@@ -231,16 +232,6 @@ main {
     display: inline-block;
 }
 
-/* Mobile adjustment - smaller and pulled in */
-@media (max-width: 768px) {
-    #home .home-based-in {
-        padding: 20px 30px 0 0;
-    }
-    
-    #home .home-based-in .based-in {
-        font-size: 1.8rem;
-    }
-}
 
 
 
@@ -258,6 +249,7 @@ main {
 #home .home-row {
     position: relative;
     z-index: 1;
+    max-width: 90%;
 }
 
 #home .home-row h1 {
@@ -306,11 +298,12 @@ main {
 /* Mobile adjustments */
 @container (max-width: 670px) {
     #home {
-        padding: 30px;
-        background-attachment: scroll; /* explicit fallback, just in case */
+        padding: 40px 20px;
+        background-attachment: scroll !important;  /* Force scroll on mobile */
+        background-position: center 30%;/* explicit fallback, just in case */
     }
     #home .home-row h1 {
-        font-size: 35px;
+        font-size: 2.2rem;
         letter-spacing: 0;
         line-height: 50px;
     }
@@ -318,7 +311,7 @@ main {
         display: none;
     }
     #home .home-row p {
-        font-size: 20px;
+        font-size: 1.3rem;
         font-weight: 400;
     }
 }
@@ -491,7 +484,7 @@ main {
 }
 
 #fact .fact-row .fact-box strong {
-    color: var(--sideBgColor);
+    color: white;
     font-size: 30px;
     margin-left: 5px;
     font-weight: 600; /* removed px */
