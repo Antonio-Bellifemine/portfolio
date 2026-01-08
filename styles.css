@@ -171,6 +171,9 @@ header .footer p a {
 }
 
 
+
+
+
 /* HEADER TOGGLE */
 .mobile-nav-active header {
     left: 0;
@@ -204,16 +207,12 @@ main {
 
 
 
-
-
-
-
-
-
-
-
-
-
+/* Reusable centered button wrapper */
+.section-button-wrapper {
+    text-align: center;
+    margin: 50px auto 20px;   /* Good spacing above/below */
+    max-width: 600px;
+}
 
 
 
@@ -709,7 +708,9 @@ main {
 /* FACTS SECTION - Balanced height and centered grid */
 #fact {
     padding: 80px 30px;                  /* Matches other sections */
-    background: linear-gradient(to right, black, #2b5876); /* Matches your portfolio section */
+    background: #2b5876;
+    background: -webkit-linear-gradient(to right, black, #2b5876);
+    background: linear-gradient(to right, black, #2b5876);
     text-align: center;
     /* Remove min-height and flex centering to match other sections */
 }

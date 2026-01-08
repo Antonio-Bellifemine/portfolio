@@ -91,8 +91,11 @@ const closeWorkModal = document.getElementById("closeWorkModal");
 const workForm = document.getElementById("workWithMeForm");
 
 // Open modal
-workBtn.addEventListener("click", () => {
-  workModal.style.display = "flex";
+// Work With Me Modal - works for ALL buttons with the class
+document.querySelectorAll('.work-with-me-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        workModal.style.display = 'flex';
+    });
 });
 
 // Close modal with X
