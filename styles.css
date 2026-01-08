@@ -206,7 +206,7 @@ main {
     position: relative;
     container-type: inline-size;
     background-color: #ffffff; /* fallback if no image */
-    text-align: center;
+    /* text-align: center; */
 }
 
 /* Position the container as reference */
@@ -301,6 +301,11 @@ main {
         padding: 40px 20px;
         background-attachment: scroll !important;  /* Force scroll on mobile */
         background-position: center 30%;/* explicit fallback, just in case */
+        text-align: center;
+        
+    }
+    #home .home-based-in {
+        text-align: center;
     }
     #home .home-row h1 {
         font-size: 2.2rem;
@@ -660,9 +665,10 @@ progress {
 
 #portfolio .port-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 35px;
     margin-top: 50px;
+    justify-content: center; /* Ensures items are horizontally centered in their track */
 }
 
 #portfolio .port-row .port-item {
@@ -672,6 +678,7 @@ progress {
     aspect-ratio: 2 / 3;
 }
 
+
 #portfolio .port-row .port-item .port-img {
     height: 100%;
 }
@@ -679,7 +686,7 @@ progress {
 #portfolio .port-row .port-item .port-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
     display: block;                /* Helps force rendering */
     background-color: #f0f0f0;     /* Fallback color if image fails to load */
     border-radius: 10px;
