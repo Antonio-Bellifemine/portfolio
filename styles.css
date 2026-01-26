@@ -323,7 +323,7 @@ main {
     display: inline-block;
     font-weight: bold;
     padding: 14px 60px;
-    background-color: var(--themeColor);
+    background-color: rgb(155, 0, 0);
     width: fit-content;
     color: white;
     text-decoration: none;
@@ -1030,5 +1030,67 @@ main {
     
     #portfolio .port-row .port-item .port-info a {
         font-size: 30px;
+    }
+}
+
+
+
+#services {
+    padding: 70px 30px;
+    background: linear-gradient(to right, black, #2b5876);
+}
+
+.service-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.service-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-8px);
+}
+
+.service-icon {
+    font-size: 48px;
+    color: var(--themeColor);
+    margin-bottom: 20px;
+}
+
+.service-info h2 {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.service-info p {
+    color: var(--textColor);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#services .info-col p {
+    color: var(--textColor);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .service-row {
+        grid-template-columns: 1fr;
     }
 }
